@@ -15,11 +15,11 @@ stdin.on('data', (key) => {
   if (key >= 1 && key <= 9) {
     process.stdout.write(`Setting timer for ${key} seconds...\n`);
     let iteration = Number(key);
-    console.log(iteration);
+    console.log(iteration.toString());
 
     const interval = setInterval(() => {
-      iteration--;
-      console.log(iteration);
+      iteration -= 1;
+      console.log(iteration.toString());
       if (iteration === 0) {
         clearInterval(interval);
       }
